@@ -1,4 +1,4 @@
-pragma solidity ^0.4.8;
+ pragma solidity ^0.4.8;
 /** @title simple multiply .
     for writing comment 
 
