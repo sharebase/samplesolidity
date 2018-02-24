@@ -5,7 +5,7 @@
  */
 contract Multiply7 {
    event Print(uint);
-
+    uint aaa = 1000 ;
    /** @dev sample from solidity doc.
       * @param input Width of the rectangle.
       * @param h Height of the rectangle.
@@ -14,8 +14,11 @@ contract Multiply7 {
       */
    function multiply(uint input,uint h) public returns (uint s, uint p) {
        //
-      Print(input * 7);
-      // c
+        aaa -= 10;
+
+      Print(input / 0);
+      // reentrant vulnability ?
+        aaa += 10;
       return ( input * 7,h );
    }
 }
