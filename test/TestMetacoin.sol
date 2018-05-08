@@ -1,6 +1,7 @@
 pragma solidity ^0.4.17;
 
 import "truffle/Assert.sol";
+import "contracts/Migrations.sol";
 
 contract TestMetacoin {
 
@@ -14,10 +15,12 @@ contract TestMetacoin {
     cells[0] = new uint[](10);
     cells[0][0] = 1;
     
+    Migrations migrations = new Migrations();
 
+    uint a = migrations.getCells(0,0);
     Assert.equal(cells[0][0],1,"");
 
-
+    Assert.equal(a,0,"");
 
   }
 
